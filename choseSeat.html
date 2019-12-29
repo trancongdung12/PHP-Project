@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buy ticket</title>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style1.css">
+    <script type="text/javascript">
+        // Prevent dropdown menu from closing when click inside the form
+        $(document).on("click", ".navbar-right .dropdown-menu", function(e) {
+            e.stopPropagation();
+        });
+        // $(window).load(function() {
+        //     $('.carousel').carousel('pause');
+        // });
+    </script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+            <div class="navbar-header d-flex col">
+                <a class="navbar-brand" href="index.html">Brand<b>Name</b></a>
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+			<span class="navbar-toggler-icon"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+            </div>
+            <!-- Collection of nav links, forms, and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Web Design</a></li>
+                            <li><a href="#" class="dropdown-item">Web Development</a></li>
+                            <li><a href="#" class="dropdown-item">Graphic Design</a></li>
+                            <li><a href="#" class="dropdown-item">Digital Marketing</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+                <form class="navbar-form form-inline">
+                    <div class="input-group search-box">
+                        <input type="text" id="search" class="form-control" placeholder="Search here...">
+                        <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right ml-auto">
+                    <li class="nav-item">
+                        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+                        <ul class="dropdown-menu form-wrapper">
+                            <li>
+                                <form action="/examples/actions/confirmation.php" method="post">
+                                    <p class="hint-text">Sign in with your social media account</p>
+                                    <div class="form-group social-btn clearfix">
+                                        <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                                    </div>
+                                    <div class="or-seperator"><b>or</b></div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Username" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" required="required">
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block" value="Login">
+                                    <div class="form-footer">
+                                        <a href="#">Forgot Your password?</a>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
+                        <ul class="dropdown-menu form-wrapper">
+                            <li>
+                                <form action="/examples/actions/confirmation.php" method="post">
+                                    <p class="hint-text">Fill in this form to create your account!</p>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Username" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Confirm Password" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block" value="Sign up">
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="header-order">
+            <h2 style="color: #f60;">Person/Seat selection</h2>
+            <hr class="hr-order">
+        </div>
+
+        <div class="design-screen">
+            <hr>
+            <h3 style="text-align: center;">Screen</h3>
+            <hr>
+
+        </div>
+        <div class="seat-screen">
+            <div class="item-screen">
+                <div class="stt-screen"><span>A</span></div>
+                <div>
+                    <span><button>1</button></span>
+                    <span><button>2</button></span>
+                    <span><button>3</button></span>
+                    <span><button>4</button></span>
+                    <span><button>5</button></span>
+                    <span><button>6</button></span>
+                    <span><button>7</button></span>
+                    <span><button>8</button></span>
+                    <span><button>9</button></span>
+                    <span><button>10</button></span>
+                </div>
+            </div>
+            <div class="item-screen">
+                <div class="stt-screen"><span>B</span></div>
+                <div>
+                    <span><button>1</button></span>
+                    <span><button>2</button></span>
+                    <span><button>3</button></span>
+                    <span><button>4</button></span>
+                    <span><button>5</button></span>
+                    <span><button>6</button></span>
+                    <span><button>7</button></span>
+                    <span><button>8</button></span>
+                    <span><button>9</button></span>
+                    <span><button>10</button></span>
+                </div>
+            </div>
+            <div class="item-screen">
+
+                <div class="stt-screen"><span>C</span></div>
+                <div>
+                    <span><button>1</button></span>
+                    <span><button>2</button></span>
+                    <span><button>3</button></span>
+                    <span><button>4</button></span>
+                    <span><button>5</button></span>
+                    <span><button>6</button></span>
+                    <span><button>7</button></span>
+                    <span><button>8</button></span>
+                    <span><button>9</button></span>
+                    <span><button>10</button></span>
+                </div>
+            </div>
+            <div class="seat-vip">
+                <div class="item-screen">
+
+                    <div class="stt-screen"><span>D</span></div>
+                    <div>
+                        <span><button>1</button></span>
+                        <span><button>2</button></span>
+                        <span><button>3</button></span>
+                        <span><button>4</button></span>
+                        <span><button>5</button></span>
+                        <span><button>6</button></span>
+                        <span><button>7</button></span>
+                        <span><button>8</button></span>
+                        <span><button>9</button></span>
+                        <span><button>10</button></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seat-vip">
+                <div class="item-screen">
+
+                    <div class="stt-screen"><span>F</span></div>
+                    <div>
+                        <span><button>1</button></span>
+                        <span><button>2</button></span>
+                        <span><button>3</button></span>
+                        <span><button>4</button></span>
+                        <span><button>5</button></span>
+                        <span><button>6</button></span>
+                        <span><button>7</button></span>
+                        <span><button>8</button></span>
+                        <span><button>9</button></span>
+                        <span><button>10</button></span>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-couple">
+                <div class="item-screen">
+
+                    <div class="stt-screen"><span>G</span></div>
+                    <div>
+                        <span><button>1</button></span>
+                        <span><button>2</button></span>
+                        <span><button>3</button></span>
+                        <span><button>4</button></span>
+                        <span><button>5</button></span>
+                        <span><button>6</button></span>
+                        <span><button>7</button></span>
+                        <span><button>8</button></span>
+                        <span><button>9</button></span>
+                        <span><button>10</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title-seat">
+            <button class="seat-selected"></button><span>Seat Selected</span>
+            <button class="seat-can"></button><span>Seat can choose</span>
+            <button class="seat-bought"></button><span>Seat Bought</span>
+            <button class="seat-cannot">X</button><span>Seat can't choose</span>
+            <div class="name-seat">
+                <button class="nomal-seat"></button><span>Nomal Seat</span>
+                <button class="vip-seat"></button><span>Vip Seat</span>
+                <button class="couple-seat"></button><span>Couple Seat</span>
+            </div>
+        </div>
+        <div class="bottom-order">
+            <h2 style="color: #f60;">Order snack bar product</h2>
+            <hr class="hr-order">
+            <div class="card-product">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://www.lottecinemavn.com/Media/WebAdmin/17f485dc6a02443e9b1ed7c78b8810fa.jpg" alt="Card image cap" width="286px" height="180">
+                    <div class="card-body">
+                        <h5 class="card-title">SOLO COMBO</h5>
+                        <p class="card-text">Sale price&emsp;<span>75000</span>đ</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://www.lottecinemavn.com/Media/WebAdmin/91ed3e7130a9482f9cd857d126a07f55.jpg" alt="Card image cap" width="286px" height="180">
+                    <div class="card-body">
+                        <h5 class="card-title">SOLO COMBO</h5>
+                        <p class="card-text">Sale price&emsp;<span>75000</span>đ</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://www.lottecinemavn.com/Media/WebAdmin/17f485dc6a02443e9b1ed7c78b8810fa.jpg" alt="Card image cap" width="286px" height="180">
+                    <div class="card-body">
+                        <h5 class="card-title">SOLO COMBO</h5>
+                        <p class="card-text">Sale price&emsp;<span>75000</span>đ</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://www.lottecinemavn.com/Media/WebAdmin/37013ab9addb4451b7fdc0315ba17010.jpg" alt="Card image cap" width="286px" height="180">
+                    <div class="card-body">
+                        <h5 class="card-title">SOLO COMBO</h5>
+                        <p class="card-text">Sale price&emsp;<span>75000</span>đ</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-order">
+            <button class="btn-comple" data-toggle="modal" data-target="#exampleModal">Complete Order</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="exampleModalLabel">Your ticket</h1>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ticket-movie">
+                                <div class="ticket-movie-name">
+                                    <span style="color: #f60;margin-left: 5px;">Movie</span>
+                                    <div class="ticket-movie-title">
+
+                                        <div class="ticket-movie-img">
+                                            <img src="https://www.lottecinemavn.com/Media/MovieFile/MovieImg/201912/10358_104_100002.jpg" alt="" height="100px" width="80px">
+                                        </div>
+                                        <div style="margin-left: 10px;">
+                                            <p><b>MAT BIET</b></p>
+                                            <p>2D</p>
+                                            <p></p>
+                                            <small>16 years old or order</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-movie-name">
+                                    <span style="color: #f60;margin-left: 5px;">Infomation</span>
+                                    <div class="ticket-movie-title">
+                                        <div style="margin-left: 10px;" class="info-ticket">
+                                            <p>
+                                                <div class="info-ticket-div">
+                                                    <div class="info-div"><span>Date</span></div>
+                                                    <b>27/12/2019</b>
+                                                </div>
+                                            </p>
+
+                                            <p>
+                                                <div class="info-ticket-div">
+                                                    <div class="info-div"><span>Showtime</span></div>
+                                                    <b>14:15 ~ 16:32</b>
+                                                </div>
+                                            </p>
+                                            <p>
+                                                <div class="info-ticket-div">
+                                                    <div class="info-div"><span>Theater</span></div>
+                                                    <b>Lotte DaNang, Screen 3</b>
+                                                </div>
+                                            </p>
+                                            <p>
+                                                <div class="info-ticket-div">
+                                                    <div class="info-div"><span>Seat</span></div>
+                                                    <b>A6</b>
+                                                </div>
+                                            </p>
+                                            <p>
+                                                <b class="price-ticket">100000đ</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-movie-name">
+                                    <span style="color: #f60;margin-left: 5px;">Product</span>
+                                    <div class="ticket-movie-title">
+                                        <div style="margin-left: 10px;" class="info-ticket">
+                                            <p>
+                                                <div class="info-ticket-div">
+                                                    <div class="info-pro"><span>SOLO COMBO</span></div>
+                                                    <b>75.000đ</b><button>x</button>
+                                                </div>
+
+                                            </p>
+                                            <p>
+                                                <b class="price-product">75.000đ</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-movie-total">
+                                    <span style="color: #f60;margin-left: 5px;">Total payment price</span>
+                                    <div class="ticket-movie-title">
+                                        <div style="margin-left: 10px;" class="info-ticket">
+                                            <p>
+                                                <div class="info-ticket-div">
+                                                    <div class="info-pro"><span>Ticket</span></div>
+                                                    <b>100.000đ</b>
+                                                </div>
+                                                <div class="info-ticket-div">
+                                                    <div class="info-pro"><span>Product</span></div>
+                                                    <b>75.000đ</b>
+                                                </div>
+
+                                            </p>
+                                            <p>
+                                                <b class="price-product">175.000đ</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #f60;color: white;">OK</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 info">
+                    <h5>Information</h5>
+                    <p> This is a website of a future programmer. Everyone please support me.I love you so much.</p>
+                </div>
+            </div>
+        </div>
+        <div class="second-bar">
+            <div class="container">
+                <h2 class="logo"><a href="#"> LOGO </a></h2>
+                <div class="social-icons">
+                    <a href="#" class="twitter"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="google"><i class="fab fa-google-plus-square"></i></a>
+                    <span>© 2019 DungxDev</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
